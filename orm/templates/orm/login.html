@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        {% load static %}  
+        <link rel = "stylesheet" href = "{%   static 'orm/style.css' %}">
+    </head>
+    <body id="bod">
+        <div class = "login">
+           
+            <div class = "form-box">  
+              {% for message in messages%}
+              <p id="messages"> {{message}}</p>
+              {% endfor %}
+              <h2 class="heading">Login</h2>
+              <br>
+              <form id="login" class="input-group" method="POST" action="">
+                  {% csrf_token %}
+                <input type="text" name="username" class="input-field" placeholder="Username" required>
+                <input  type="password" name="password" class="input-field" placeholder="Password" required>
+                <br>
+                <br>
+                <button  class="submit-btn">Login</button>
+                <br>
+                <div>
+                    Don't have an account? <a style="color: aqua;" href="{% url 'orm-register' %}" >Sign Up</a>
+                </div>
+            </form>
+           
+          </div>
+            </div>
+           
+    </body>
+</html>
