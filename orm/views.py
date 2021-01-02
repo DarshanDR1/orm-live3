@@ -191,8 +191,6 @@ def register(request):
         form =  createUserForm(request.POST)
         if form.is_valid():
             user = form.save()
-            group = Group.objects.get(name="applicant")
-            user.groups.add(group)
             name = form.cleaned_data.get("username")
             messages.success(request,'Account is cerated for '+name)
             return redirect("orm-login")
