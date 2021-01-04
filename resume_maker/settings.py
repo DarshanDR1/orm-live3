@@ -27,7 +27,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'r=ubfssqvkw*t7n&klmn&fj4h_^pr)m)r8lf_lsi3^*#dz8n_^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['online-resume-maker.herokuapp.com','127.0.01',"resume-maker-online.herokuapp.com","darshandr.herokuapp.com"]
 
